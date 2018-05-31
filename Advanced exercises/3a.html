@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="800" height="500" style="border:1px solid #000000;">
+</canvas>
+<button onclick="draw()">Create rectangle</button>
+<script>
+function draw() {
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var x = Math.floor((Math.random() * 100) + 1);
+var y = x + 200;
+ctx.rect(y, y, x, x);
+ctx.stroke();
+}
+</script>
+</body>
+</html>
