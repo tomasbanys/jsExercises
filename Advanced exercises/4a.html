@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
+</canvas>
+<button onclick="draw()">Fill Canvas</button>
+<script>
+function draw() {
+for(var i=0;i<380;i++){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var x = Math.floor((Math.random() * 100) + 1);
+var y = x + 100;
+ctx.rect(i, i, x, y);
+ctx.fillRect(i,i,x,y);
+ctx.stroke();
+}
+}
+</script>
+</body>
+</html>
